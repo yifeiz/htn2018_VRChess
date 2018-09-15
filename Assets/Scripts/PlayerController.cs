@@ -16,9 +16,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if(OVRInput.IsControllerConnected(OVRInput.Controller.RTrackedRemote)){
-            if(OVRInput.Get(OVRInput.RawButton.RIndexTrigger)){
-                new SingleMicrophoneCapture();
+        if(OVRInput.IsControllerConnected(OVRInput.Controller.RTrackedRemote)|| OVRInput.IsControllerConnected(OVRInput.Controller.LTrackedRemote)){
+            if(OVRInput.Get(OVRInput.RawButton.RIndexTrigger)|| OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+            {
+                SingleMicrophoneCapture mic = new SingleMicrophoneCapture();
             }
         }
 
