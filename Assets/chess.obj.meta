@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 4c79f56e7caa51f4d9c9c4db19961f93
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ALFIERE02
+    100002: ALFIERE3
+    100004: //RootNode
+    100006: Object02
+    100008: Object3
+    100010: PEDONE12
+    100012: PEDONE13
+    100014: RE01
+    100016: RE2
+    100018: REGINA01
+    100020: REGINA2
+    100022: TORRE02
+    100024: TORRE3
+    400000: ALFIERE02
+    400002: ALFIERE3
+    400004: //RootNode
+    400006: Object02
+    400008: Object3
+    400010: PEDONE12
+    400012: PEDONE13
+    400014: RE01
+    400016: RE2
+    400018: REGINA01
+    400020: REGINA2
+    400022: TORRE02
+    400024: TORRE3
+    2100000: ALFIERE02Mat
+    2100002: ALFIERE3Mat
+    2100004: Object02Mat
+    2100006: Object3Mat
+    2100008: PEDONE12Mat
+    2100010: PEDONE13Mat
+    2100012: RE01Mat
+    2100014: RE2Mat
+    2100016: REGINA01Mat
+    2100018: REGINA2Mat
+    2100020: TORRE02Mat
+    2100022: TORRE3Mat
+    2300000: ALFIERE02
+    2300002: ALFIERE3
+    2300004: Object02
+    2300006: Object3
+    2300008: PEDONE12
+    2300010: PEDONE13
+    2300012: RE01
+    2300014: RE2
+    2300016: REGINA01
+    2300018: REGINA2
+    2300020: TORRE02
+    2300022: TORRE3
+    3300000: ALFIERE02
+    3300002: ALFIERE3
+    3300004: Object02
+    3300006: Object3
+    3300008: PEDONE12
+    3300010: PEDONE13
+    3300012: RE01
+    3300014: RE2
+    3300016: REGINA01
+    3300018: REGINA2
+    3300020: TORRE02
+    3300022: TORRE3
+    4300000: ALFIERE02
+    4300002: ALFIERE3
+    4300004: Object02
+    4300006: Object3
+    4300008: PEDONE12
+    4300010: PEDONE13
+    4300012: RE01
+    4300014: RE2
+    4300016: REGINA01
+    4300018: REGINA2
+    4300020: TORRE02
+    4300022: TORRE3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ALFIERE02Mat
+    second: {fileID: 2100000, guid: 44d4fe1c7264d314e9b9d5ab40e29863, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ALFIERE3Mat
+    second: {fileID: 2100000, guid: fcb15a2ebe871884a810fabc53777f69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Object02Mat
+    second: {fileID: 2100000, guid: d4199f579ce4a404db9ab8d40fe69da2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Object3Mat
+    second: {fileID: 2100000, guid: 07e03db39b7e2a24cae30de32acb31ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PEDONE12Mat
+    second: {fileID: 2100000, guid: fefdc578067a640488a6cca0b9091a4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PEDONE13Mat
+    second: {fileID: 2100000, guid: fa66c384c387dd44e8b17452b06a62e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RE01Mat
+    second: {fileID: 2100000, guid: 6b5498b324e8e6247bcc774555837fd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RE2Mat
+    second: {fileID: 2100000, guid: d5447aa70652f154cb99177e2da43145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: REGINA01Mat
+    second: {fileID: 2100000, guid: 8b625283fc5e8a441a0fe7bedd022423, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: REGINA2Mat
+    second: {fileID: 2100000, guid: d26263ed82d4f0f4e97a82fcffd5c9d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TORRE02Mat
+    second: {fileID: 2100000, guid: 6ac64bbdfb647424ead6013c78ece85a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TORRE3Mat
+    second: {fileID: 2100000, guid: aef9d568f67bf2c41aeb4302c433498d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
