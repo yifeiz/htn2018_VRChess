@@ -1,4 +1,4 @@
 sceneSetups:
-- path: D:/Documents/VR Chess/Assets/chess_board.unity
+- path: Assets/yukari_chess.unity
   isLoaded: 1
   isActive: 1
