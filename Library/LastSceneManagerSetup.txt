@@ -1,4 +1,0 @@
-sceneSetups:
-- path: D:/Documents/VR Chess/Assets/chess_board.unity
-  isLoaded: 1
-  isActive: 1
