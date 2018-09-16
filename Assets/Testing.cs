@@ -93,11 +93,13 @@ public class Testing : MonoBehaviour {
 
 
     public GameObject violetDetector;
+    public GameObject purpleDetector;
+
     public Boolean black = false;
-    public int modifier = 1;
 
     public void movePiece(string current, string target)
     {
+        
         Move move = new Move(current, target, game.WhoseTurn);
         bool isValid = game.IsValidMove(move);
 
@@ -108,24 +110,31 @@ public class Testing : MonoBehaviour {
             violetDetector = GameObject.Find(current);
             Collider[] hitColliders = Physics.OverlapSphere(violetDetector.transform.position, 1);
             GameObject sumireko = hitColliders[0].gameObject;
-            sumireko.transform.Translate(Vector3.up * (boardCoords[target][2] - sumireko.transform.position.z) * modifier);
-            sumireko.transform.Translate(Vector3.right * (boardCoords[target][0] - sumireko.transform.position.x) * modifier);
-        }
+            sumireko.transform.Translate(Vector3.up * (boardCoords[target][2] - sumireko.transform.position.z));
+            sumireko.transform.Translate(Vector3.right * (boardCoords[target][0] - sumireko.transform.position.x));
 
-        /*if (black == false)
-        {
-            black = true;
-            modifier = -1;
+            
+            purpleDetector = GameObject.Find(target);
+            Collider[] smackColliders = Physics.OverlapSphere(purpleDetector.transform.position, 1);
+            foreach (Collider collider in smackColliders)
+            {
+                if ((collider.gameObject.transform.parent.name == "WPieces" && black == true) || (collider.gameObject.transform.parent.name == "BPieces" && black == false))
+                {
+                    GameObject renko = collider.gameObject;
+                    Debug.Log(renko.name);
+                    renko.transform.Translate(Vector3.forward * 100);
+                }
+            }      
+            
+            if (black == false)
+            {
+                black = true;
+            }
+            else
+            {
+                black = false;
+            }
         }
-        else
-        {
-            black = false;
-            modifier = 1;
-        }*/
-
-        Piece[][] currentBoard = game.GetBoard();
-        int i = 0;
-        int j = 0;
 
         if (game.IsInCheck(game.WhoseTurn) == true)
         {}
@@ -153,6 +162,7 @@ public class Testing : MonoBehaviour {
         this.movePiece("G8", "H6");
         this.movePiece("F1", "A6");
         this.movePiece("C7", "C5");
+        this.movePiece("D1", "E2");
      
 
      /*   Piece pieceAtA1 = game.GetPieceAt(new Position("A1")); 

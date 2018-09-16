@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\Chess\Demo\Scripts\Main.cs" />
      <Compile Include="Assets\Chess\Scripts\ChessUiEngine.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Composition\OVRCameraComposition.cs" />
@@ -103,7 +104,6 @@
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
-     <Compile Include="Assets\Scripts\BasicUsageSample.cs" />
      <Compile Include="Assets\Scripts\ChessDotNet\Cache.cs" />
      <Compile Include="Assets\Scripts\ChessDotNet\CastlingType.cs" />
      <Compile Include="Assets\Scripts\ChessDotNet\ChessGame.cs" />
@@ -125,7 +125,6 @@
      <Compile Include="Assets\Scripts\ChessDotNet\Position.cs" />
      <Compile Include="Assets\Scripts\ChessDotNet\PositionDistance.cs" />
      <Compile Include="Assets\Scripts\ChessDotNet\Properties\AssemblyInfo.cs" />
-     <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Testing.cs" />
      <None Include="Assets\Oculus\VR\Resources\OVRMRUnlitTransparent.shader" />
      <None Include="Assets\Oculus\VR\Resources\OVRMRChromaKey.cginc" />
