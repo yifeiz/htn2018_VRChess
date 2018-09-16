@@ -242,6 +242,9 @@
     <Reference Include="Unity.Locator">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/Unity.Locator.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -250,6 +253,9 @@
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.UnityExtensions">
+      <HintPath>/Applications/Unity/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
@@ -260,14 +266,17 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets/Watson/Plugins/websocket-sharp.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>/Users/anisrikanth/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>/Users/DaekunKim/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>/Users/anisrikanth/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>/Users/DaekunKim/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
@@ -348,264 +357,6 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\SingleMicrophoneCapture.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleAssistant.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleCallback.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleConversation.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleCustomHeaders.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleDiscovery.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleGetToken.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleLanguageTranslatorV2.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleLanguageTranslatorV3.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleNaturalLanguageClassifier.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleNaturalLanguageUnderstanding.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExamplePersonalityInsights.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleSpeechToText.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleStreaming.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleStreamingSplitSamples.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleTextToSpeech.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleToneAnalyzer.cs" />
-    <Compile Include="Assets\Watson\Examples\ServiceExamples\Scripts\ExampleVisualRecognition.cs" />
-    <Compile Include="Assets\Watson\Scripts\Connection\RESTConnector.cs" />
-    <Compile Include="Assets\Watson\Scripts\Connection\WSConnector.cs" />
-    <Compile Include="Assets\Watson\Scripts\Debug\DebugReactor.cs" />
-    <Compile Include="Assets\Watson\Scripts\Logging\FileReactor.cs" />
-    <Compile Include="Assets\Watson\Scripts\Logging\ILogReactor.cs" />
-    <Compile Include="Assets\Watson\Scripts\Logging\Logger.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Assistant.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\IAssistant.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CaptureGroup.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Context.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Counterexample.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CounterexampleCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CreateCounterexample.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CreateDialogNode.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CreateEntity.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CreateExample.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CreateIntent.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CreateSynonym.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CreateValue.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\CreateWorkspace.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNode.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeAction.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeNextStep.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeOutput.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeOutputGeneric.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeOutputModifiers.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeOutputOptionsElement.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeOutputOptionsElementValue.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeOutputTextValuesElement.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogNodeVisitedDetails.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogRuntimeResponseGeneric.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogRuntimeResponseTypeOption.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogRuntimeResponseTypeSuggestion.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogSuggestion.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\DialogSuggestionValue.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Entity.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\EntityCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\EntityExport.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\EntityMention.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\EntityMentionCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Example.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\ExampleCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\InputData.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Intent.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\IntentCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\IntentExport.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\LogCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\LogExport.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\LogMessage.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\LogPagination.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Mentions.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\MessageInput.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\MessageRequest.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\MessageResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\OutputData.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Pagination.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\RuntimeEntity.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\RuntimeIntent.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Synonym.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\SynonymCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\SystemResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\UpdateCounterexample.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\UpdateDialogNode.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\UpdateEntity.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\UpdateExample.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\UpdateIntent.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\UpdateSynonym.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\UpdateValue.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\UpdateWorkspace.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Value.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\ValueCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\ValueExport.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\Workspace.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\WorkspaceCollection.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\WorkspaceExport.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\WorkspaceSystemSettings.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\WorkspaceSystemSettingsDisambiguation.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Assistant\v1\Model\WorkspaceSystemSettingsTooling.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Conversation\v1\Conversation.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Conversation\v1\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Discovery.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\CreateEventObject.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\CreateEventResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\EventData.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\Expansion.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\Expansions.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\LogQueryResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\LogQueryResponseResult.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\LogQueryResponseResultDocuments.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\LogQueryResponseResultDocumentsResult.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\MetricAggregation.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\MetricAggregationResult.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\MetricResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\MetricTokenAggregation.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\MetricTokenAggregationResult.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\MetricTokenResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryEntities.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryEntitiesContext.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryEntitiesEntity.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryEntitiesResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryEntitiesResponseItem.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryEvidence.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryEvidenceEntity.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryFilterType.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryNoticesResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryNoticesResult.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryPassages.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryRelations.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryRelationsArgument.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryRelationsEntity.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryRelationsFilter.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryRelationsRelationship.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryRelationsResponse.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\Discovery\v1\Models\QueryResultMetadata.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\IWatsonService.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\LanguageTranslator\v2\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\LanguageTranslator\v2\LanguageTranslator.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\LanguageTranslator\v3\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\LanguageTranslator\v3\LanguageTranslator.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\NaturalLanguageClassifier\v2\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\NaturalLanguageClassifier\v2\NaturalLanguageClassifier.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\NaturalLanguageUnderstanding\v1\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\NaturalLanguageUnderstanding\v1\NaturalLanguageUnderstanding.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\PersonalityInsights\v3\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\PersonalityInsights\v3\PersonalityInsights.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\SpeechToText\v1\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\SpeechToText\v1\SpeechToText.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\TextToSpeech\v1\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\TextToSpeech\v1\TextToSpeech.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\DocumentAnalysis.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\SentenceAnalysis.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\ToneAnalysis.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\ToneCategory.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\ToneChatInput.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\ToneChatScore.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\ToneInput.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\ToneScore.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\Utterance.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\UtteranceAnalyses.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\Model\UtteranceAnalysis.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\ToneAnalyzer\v3\ToneAnalyzer.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\VisualRecognition\v3\DataModels.cs" />
-    <Compile Include="Assets\Watson\Scripts\Services\VisualRecognition\v3\VisualRecognition.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestAssistantCF.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestAssistantRC.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestConversation.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestDiscovery.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestEventManager.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestLanguageTranslatorV2.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestLanguageTranslatorV3CF.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestLanguageTranslatorV3RC.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestLanguageTranslatorV3RCApikeyAsBasicauth.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestNaturalLanguageClassifier.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestNaturalLanguageUnderstanding.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestPersonalityInsights.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestRunnable.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestSpeechToText.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestTextToSpeech.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestToneAnalyzer.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestVisualRecognitionCF.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\TestVisualRecognitionRC.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\UnitTest.cs" />
-    <Compile Include="Assets\Watson\Scripts\UnitTests\UnitTestManager.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\AudioClipUtil.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\Constants.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\Credentials.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\EventManager.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\FrameRateCounter.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\KeyEventManager.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\NestedPrefabs.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\Runnable.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\SerializedDelegate.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\Singleton.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\TimedDestroy.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\UnityObjectUtil.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\Utility.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\WatsonException.cs" />
-    <Compile Include="Assets\Watson\Scripts\Utilities\WaveFile.cs" />
-    <Compile Include="Assets\Watson\Scripts\Widgets\DataTypes.cs" />
-    <Compile Include="Assets\Watson\Scripts\Widgets\Widget.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Aot\fsAotCompilationManager.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Aot\fsAotConfiguration.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Aot\fsAotVersionInfo.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Aot\fsIAotConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsArrayConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsDateConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsDictionaryConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsEnumConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsForwardConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsGuidConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsIEnumerableConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsKeyValuePairConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsNullableConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsPrimitiveConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsReflectedConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsTypeConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\fsWeakReferenceConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\AnimationCurve_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\Bounds_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\Gradient_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\GUIStyle_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\GUIStyleState_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\Keyframe_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\LayerMask_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\Rect_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\RectOffset_DirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Converters\Unity\UnityEvent_Converter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsBaseConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsConfig.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsContext.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsConverterRegistrar.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsData.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsDirectConverter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsExceptions.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsIgnoreAttribute.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsISerializationCallbacks.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsJsonParser.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsJsonPrinter.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsMemberSerialization.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsObjectAttribute.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsObjectProcessor.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsPropertyAttribute.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsResult.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\fsSerializer.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Internal\fsCyclicReferenceManager.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Internal\fsOption.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Internal\fsPortableReflection.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Internal\fsTypeExtensions.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Internal\fsVersionedType.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Internal\fsVersionManager.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Reflection\fsMetaProperty.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Reflection\fsMetaType.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Reflection\fsReflectionUtility.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Reflection\fsTypeCache.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\MiniJSON\MiniJSON.cs" />
-    <Compile Include="Assets\Watson\Travis\TravisIntegrationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
@@ -623,10 +374,6 @@
     <None Include="Assets\Oculus\VR\Resources\Unlit Transparent Color.shader" />
     <None Include="Assets\Oculus\VR\Shaders\OVRColorRampAlpha.shader" />
     <None Include="Assets\Oculus\VR\Shaders\Unlit Crosshair.shader" />
-    <None Include="Assets\Watson\Examples\ServiceExamples\TestData\theJabberwocky-utf8.txt" />
-    <None Include="Assets\Watson\NOTICES.txt" />
-    <None Include="Assets\Watson\Scripts\Editor\Help\Working\SHFBContent.xml" />
-    <None Include="Assets\Watson\Scripts\Editor\Help\Working\StopWordList.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />

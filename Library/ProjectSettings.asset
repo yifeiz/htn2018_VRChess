@@ -154,7 +154,6 @@ PlayerSettings:
     Android: com.htn2018.vrchess
     Standalone: com.oculus.UnitySample
     iOS: com.oculus.UnitySample
-    tvOS: com.oculus.UnitySample
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 21
@@ -385,7 +384,9 @@ PlayerSettings:
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 1
-    m_Devices: []
+    m_Devices:
+    - Oculus
+    - OpenVR
   - m_BuildTarget: iOS
     m_Enabled: 1
     m_Devices: []
@@ -393,9 +394,6 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - Oculus
-  - m_BuildTarget: tvOS
-    m_Enabled: 1
-    m_Devices: []
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
