@@ -12,12 +12,13 @@ namespace Chess
             ChessGame game = new ChessGame();
 
             //Move movement = new Move(SelectedSpace, TargetSpace, game.WhoseTurn);
-            Move move = new Move("A0", "A1", game.WhoseTurn);
+            Move move = new Move("E2", "E4", game.WhoseTurn);
             bool isValid = game.IsValidMove(move);
 
             if (isValid == true)
             {
                 MoveType type = game.ApplyMove(move, true);
+                Console.WriteLine(game.GetPieceAt(File.E,4));
             }
 
             if (game.IsInCheck(game.WhoseTurn) == true)

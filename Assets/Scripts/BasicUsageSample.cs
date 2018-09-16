@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Samples
 {
@@ -38,6 +39,7 @@ namespace Samples
             // MoveType is a flags enumeration. https://msdn.microsoft.com/en-us/library/ms229062%28v=vs.100%29.aspx
             // e4 is just a normal move, so `type` will just be MoveType.Move.
             Console.WriteLine("Move type: {0}", type);
+            Debug.Log(game.GetPieceAt(File.E, 4));
 
             // When a move has been made, check the Status property. It will let you know if there is a special event: check, checkmate, stalemate ...
             // GameStatus status = game.Status;
