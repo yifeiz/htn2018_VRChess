@@ -1,0 +1,6 @@
+/Users/yifeiz/Documents/GitHub/Chess.NET/ChessDotNet/bin/Debug/ChessDotNet.dll
+/Users/yifeiz/Documents/GitHub/Chess.NET/ChessDotNet/bin/Debug/ChessDotNet.pdb
+/Users/yifeiz/Documents/GitHub/Chess.NET/ChessDotNet/obj/Debug/ChessDotNet.csprojAssemblyReference.cache
+/Users/yifeiz/Documents/GitHub/Chess.NET/ChessDotNet/obj/Debug/ChessDotNet.csproj.CoreCompileInputs.cache
+/Users/yifeiz/Documents/GitHub/Chess.NET/ChessDotNet/obj/Debug/ChessDotNet.dll
+/Users/yifeiz/Documents/GitHub/Chess.NET/ChessDotNet/obj/Debug/ChessDotNet.pdb

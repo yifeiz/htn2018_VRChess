@@ -321,6 +321,12 @@
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="ChessDotNet">
+      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/ChessDotNet/obj/Debug/ChessDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ChessDotNet">
+      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/ChessDotNet/bin/Debug/ChessDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>/Users/yifeiz/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -338,36 +344,6 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.3.0.1/lib/portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.engine.api">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/nunit.engine.api.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.3.0.1/lib/dotnet/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.3.0.1/lib/net45/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.3.0.1/lib/net20/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.3.0.1/lib/net40/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="ChessDotNet">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/ChessDotNet/bin/Debug/ChessDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="ChessDotNet">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/ChessDotNet/obj/Debug/ChessDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.engine">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/nunit.engine.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
