@@ -110,18 +110,6 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Board.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\ChessColor.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Model\Bishop.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Model\King.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Model\Knight.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Model\Pawn.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Model\Piece.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Model\Queen.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Model\Rook.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Movement.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\MovementResult.cs" />
-    <Compile Include="Assets\Scripts\Chess.Core\Rule.cs" />
     <Compile Include="Assets\Scripts\Chess.NET\ChessDotNet\Cache.cs" />
     <Compile Include="Assets\Scripts\Chess.NET\ChessDotNet\CastlingType.cs" />
     <Compile Include="Assets\Scripts\Chess.NET\ChessDotNet\ChessGame.cs" />
@@ -143,34 +131,33 @@
     <Compile Include="Assets\Scripts\Chess.NET\ChessDotNet\Position.cs" />
     <Compile Include="Assets\Scripts\Chess.NET\ChessDotNet\PositionDistance.cs" />
     <Compile Include="Assets\Scripts\Chess.NET\ChessDotNet\Properties\AssemblyInfo.cs" />
-    <Compile Include="Assets\Scripts\PieceMovement.cs" />
     <Compile Include="Assets\TestBoard.cs" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit.engine.api.xml" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\NOTICES.txt" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.ConsoleRunner.3.4.1\LICENSE.txt" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\LICENSE.txt" />
     <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\lib\dotnet\nunit.framework.xml" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRUnlitTransparent.shader" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRChromaKey.cginc" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\lib\net45\nunit.framework.xml" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\lib\net20\nunit.framework.xml" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\NOTICES.txt" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\CHANGES.txt" />
     <None Include="Assets\Oculus\VR\Shaders\OVRColorRampAlpha.shader" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\lib\net20\nunit.framework.xml" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.ConsoleRunner.3.4.1\CHANGES.txt" />
     <None Include="Assets\Oculus\VR\Resources\Cubemap Blit.shader" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\LICENSE.txt" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRUnlit.shader" />
     <None Include="Assets\Oculus\VR\Shaders\Unlit Crosshair.shader" />
     <None Include="Assets\Oculus\VR\Resources\Unlit Transparent Color.shader" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.ConsoleRunner.3.4.1\LICENSE.txt" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.ConsoleRunner.3.4.1\NOTICES.txt" />
+    <None Include="Assets\Scripts\Chess.NET\ChessDotNet\obj\Debug\ChessDotNet.csproj.FileListAbsolute.txt" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRCameraFrameLit.shader" />
     <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\lib\portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10\nunit.framework.xml" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\CHANGES.txt" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\lib\net40\nunit.framework.xml" />
-    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.ConsoleRunner.3.4.1\CHANGES.txt" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.ConsoleRunner.3.4.1\NOTICES.txt" />
     <None Include="Assets\Oculus\VR\Resources\Underlay Transparent Occluder.shader" />
     <None Include="Assets\Oculus\VR\Resources\Texture2D Blit.shader" />
-    <None Include="Assets\Scripts\Chess.NET\ChessDotNet\obj\Debug\ChessDotNet.csproj.FileListAbsolute.txt" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRCameraFrame.shader" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRClipPlane.shader" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\lib\net40\nunit.framework.xml" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.3.0.1\lib\net45\nunit.framework.xml" />
     <None Include="Assets\Oculus\VR\Resources\Underlay Impostor.shader" />
+    <None Include="Assets\Scripts\Chess.NET\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit.engine.api.xml" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
@@ -385,26 +372,26 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="ChessDotNet">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/ChessDotNet/obj/Debug/ChessDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="ChessDotNet">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/ChessDotNet/bin/Debug/ChessDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.engine.api">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/nunit.engine.api.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.engine">
-      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/nunit.engine.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>/Users/yifeiz/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>/Users/yifeiz/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.engine.api">
+      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/nunit.engine.api.dll</HintPath>
+    </Reference>
+    <Reference Include="ChessDotNet">
+      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/ChessDotNet/bin/Debug/ChessDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ChessDotNet">
+      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/ChessDotNet/obj/Debug/ChessDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.engine">
+      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/nunit.engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>/Users/yifeiz/Documents/GitHub/htn2018_VRChess/Assets/Scripts/Chess.NET/packages/NUnit.ConsoleRunner.3.4.1/tools/Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
