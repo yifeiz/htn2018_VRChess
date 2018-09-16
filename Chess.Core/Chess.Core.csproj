@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>It contains all core definitions.</Description>
+    <Authors>Antonio Di Motta</Authors>
+    <Company>ADM</Company>
+  </PropertyGroup>
+
+</Project>
