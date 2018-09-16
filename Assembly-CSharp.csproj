@@ -55,8 +55,6 @@
   <ItemGroup>
      <Compile Include="Assets\Chess\Demo\Scripts\Main.cs" />
      <Compile Include="Assets\Chess\Scripts\ChessUiEngine.cs" />
-     <Compile Include="Assets\MovePawn.cs" />
-     <Compile Include="Assets\MoveWPawn5.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Composition\OVRCameraComposition.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Composition\OVRComposition.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Composition\OVRCompositionUtil.cs" />

@@ -75,7 +75,7 @@ namespace ChessDotNet
             { 'P', new Pawn(Player.White) },
             { 'p', new Pawn(Player.Black) },
         };
-        protected virtual Dictionary<char, Piece> FenMappings
+        public virtual Dictionary<char, Piece> FenMappings
         {
             get
             {
