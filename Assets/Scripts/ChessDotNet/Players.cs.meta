@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 9188513bf890ed8439ea19d674f9ed28
+=======
+guid: b256f286a0c0d432cb3cdd92e67b5b6f
+>>>>>>> piece-movement
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

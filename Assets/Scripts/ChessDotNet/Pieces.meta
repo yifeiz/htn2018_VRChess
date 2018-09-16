@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b23a42c742994b142a90532710c52d4e
+=======
+guid: e9d6d048a2bbb4c54af1b71468b41bc0
+>>>>>>> piece-movement
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

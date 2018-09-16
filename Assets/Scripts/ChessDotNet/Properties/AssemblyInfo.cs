@@ -36,4 +36,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("0.9.6.0")]
 [assembly: AssemblyFileVersion("0.9.6.0")]
 
+<<<<<<< HEAD
 [assembly: CLSCompliant(true)]
+=======
+[assembly: CLSCompliant(false)]
+>>>>>>> piece-movement

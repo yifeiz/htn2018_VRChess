@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Oculus/VR/Meshes/Cone.obj.meta
+guid: c28fa8d61f81fb742b1180a6d4516625
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Mesh1_Model
+    400000: //RootNode
+    400002: Mesh1_Model
+    2300000: Mesh1_Model
+    3300000: Mesh1_Model
+    4300000: Mesh1_Model
+=======
+guid: 04e5120954a5c0e42ae6bdc55bfe74a9
+timeCreated: 1458051932
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: stein_01
+    100002: stein_02
+    100004: stein_03
+    100006: stein_04
+    100008: //RootNode
+    400000: stein_01
+    400002: stein_02
+    400004: stein_03
+    400006: stein_04
+    400008: //RootNode
+    2300000: stein_01
+    2300002: stein_02
+    2300004: stein_03
+    2300006: stein_04
+    3300000: stein_01
+    3300002: stein_02
+    3300004: stein_03
+    3300006: stein_04
+    4300000: stein_04
+    4300002: stein_02
+    4300004: stein_03
+    4300006: stein_01
+    7400000: Take 001
+>>>>>>> piece-movement:Assets/Butterfly (Animated)/FBX/stones.FBX.meta
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+<<<<<<< HEAD:Assets/Oculus/VR/Meshes/Cone.obj.meta
+    optimizeGameObjects: 0
+    motionNodeName: 
+=======
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+>>>>>>> piece-movement:Assets/Butterfly (Animated)/FBX/stones.FBX.meta
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+<<<<<<< HEAD:Assets/Oculus/VR/Meshes/Cone.obj.meta
+=======
+    useFileScale: 1
+>>>>>>> piece-movement:Assets/Butterfly (Animated)/FBX/stones.FBX.meta
+  tangentSpace:
+    normalSmoothAngle: 90
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
+<<<<<<< HEAD:Assets/Oculus/VR/Meshes/Cone.obj.meta
+    tangentImportMode: 1
+=======
+    tangentImportMode: 3
+>>>>>>> piece-movement:Assets/Butterfly (Animated)/FBX/stones.FBX.meta
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+<<<<<<< HEAD:Assets/Oculus/VR/Meshes/Cone.obj.meta
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+=======
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+>>>>>>> piece-movement:Assets/Butterfly (Animated)/FBX/stones.FBX.meta
+  additionalBone: 0
+  userData: 

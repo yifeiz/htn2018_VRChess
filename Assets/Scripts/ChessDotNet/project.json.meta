@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 45d08f40f50c55a4c82b7ef2edd72468
+=======
+guid: 5d06079704ffb45c8bc3cf9373307347
+>>>>>>> piece-movement
 TextScriptImporter:
   externalObjects: {}
   userData: 
