@@ -1,6 +1,7 @@
 ﻿using ChessDotNet; 
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Linq;
 using UnityEngine;
 
@@ -75,53 +76,60 @@ public class Testing : MonoBehaviour {
         { "H8", new[]{14, 0, 14} },
     };
 
-    /* public Dictionary<Dictionary<char, Piece>, GameObject> translateBoard = new Dictionary<char, Piece>()
-    {
-        { FenMappings['K'], "wKing" },
-        { FenMappings['k'], "bKing" },
-        { FenMappings['Q'], "wQueen" },
-        { FenMappings['q'], "bQueen" },
-        { FenMappings['R'], "wRook" },
-        { FenMappings['r'], "bRook" },
-        { FenMappings['N'], "wKnight" },
-        { FenMappings['n'], "bKnight" },
-        { FenMappings['B'], "wBishop" },
-        { FenMappings['b'], "bBishop" },
-        { FenMappings['P'], "wPawn" },
-        { FenMappings['p'], "bPawn" },
-    }; */
 
-
-    public GameObject violetDetector;
-    public Boolean black = false;
+    private Color32 copper = new Color32(223, 141, 56, 255);
     public int modifier = 1;
 
-    public void movePiece(string current, string target)
+    private string command;
+    private string selected;
+    protected GameObject highlightPiece = null;
+
+
+    static GameObject getSumireko(string square)
     {
-        Move move = new Move(current, target, game.WhoseTurn);
-        bool isValid = game.IsValidMove(move);
+        GameObject violetDetector = GameObject.Find(square);
+        Collider[] hitColliders = Physics.OverlapSphere(violetDetector.transform.position, 1);
 
 
-        if (isValid == true)
+        for (int i = 0; i < hitColliders.Count(); i++)
         {
-            MoveType type = game.ApplyMove(move, true);
-            violetDetector = GameObject.Find(current);
-            Collider[] hitColliders = Physics.OverlapSphere(violetDetector.transform.position, 1);
-            GameObject sumireko = hitColliders[0].gameObject;
-            sumireko.transform.Translate(Vector3.up * (boardCoords[target][2] - sumireko.transform.position.z) * modifier);
-            sumireko.transform.Translate(Vector3.right * (boardCoords[target][0] - sumireko.transform.position.x) * modifier);
+            if ((hitColliders[i].gameObject.transform.parent.name == "WhitePieces") || (hitColliders[i].gameObject.transform.parent.name == "BlackPieces"))
+            {
+                return hitColliders[i].gameObject;
+            }
         }
 
-        /*if (black == false)
+        return null; 
+    }
+
+
+    public void movePiece(string current, string target) // Moves piece from current to target
+    {
+        Player currentPlayer = game.WhoseTurn;
+        Move move = new Move(current, target, currentPlayer);
+        bool isValid = game.IsValidMove(move);
+
+        if (isValid) // If move if valid, detect piece on current square and send it to target square
         {
-            black = true;
-            modifier = -1;
+            MoveType type = game.ApplyMove(move, true);
+
+            if ((type & MoveType.Capture) == MoveType.Capture) // If movement kills another unit, send it to the shadow realm
+            {
+                GameObject capturedPiece = getSumireko(target);
+                capturedPiece.transform.Translate(Vector3.forward * 100);
+            }
+
+            GameObject movingPiece = getSumireko(current);
+            movingPiece.transform.Translate(Vector3.up * (boardCoords[target][2] - movingPiece.transform.position.z) * modifier);
+            movingPiece.transform.Translate(Vector3.right * (boardCoords[target][0] - movingPiece.transform.position.x) * modifier);
+            Debug.Log($"{type} movement by {currentPlayer} from {current} to {target} was successful.");
         }
         else
         {
-            black = false;
-            modifier = 1;
-        }*/
+            Debug.Log($"Movement by {currentPlayer} from {current} to {target} was not possible.");
+        }
+
+        
 
         Piece[][] currentBoard = game.GetBoard();
         int i = 0;
@@ -149,10 +157,18 @@ public class Testing : MonoBehaviour {
 	void Start () {
         game = new ChessGame();
 
-        this.movePiece("E2", "E4");
-        this.movePiece("G8", "H6");
-        this.movePiece("F1", "A6");
-        this.movePiece("C7", "C5");
+        this.movePiece("A2", "A3"); // W1
+        this.movePiece("C7", "C5"); // B1
+        this.movePiece("F2", "F3"); // W2
+        this.movePiece("G7", "G5"); // B2
+        this.movePiece("D2", "D4"); // W3
+        this.movePiece("F7", "F6"); // B3
+        this.movePiece("B2", "B3"); // W4
+        this.movePiece("G8", "H6"); // B4
+        this.movePiece("C1", "G5"); // W5
+
+        command = "";
+       
      
 
      /*   Piece pieceAtA1 = game.GetPieceAt(new Position("A1")); 
@@ -170,7 +186,63 @@ public class Testing : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+
+        if (Input.anyKeyDown) // Gathers an input command from keyboard ~ possibly more efficient method available
+        {
+            command += Input.inputString;
+            command = command.ToUpper();
+            Debug.Log(command);
+        }
+        
+
+        if ((command.Length == 2) && (Regex.IsMatch(command, @"^[A-H][1-8]$"))) // Activates violetDetector if command if valid
+        {
+            if (highlightPiece != null) // On second valid input, attempts movement to target square and de-highlights piece
+            {
+                this.movePiece(selected, command);
+
+                Renderer rend = highlightPiece.GetComponent<Renderer>();
+
+                if (highlightPiece.name.Contains("White"))
+                {
+                    rend.material.color = copper;
+                }
+                else if (highlightPiece.name.Contains("Black"))
+                {
+                    rend.material.color = Color.black;
+                }
+                highlightPiece = null;
+                selected = "";
+                command = "";
+            }
+            else
+            {
+                highlightPiece = getSumireko(command);
+                if (highlightPiece != null) // Highlights target piece, if selected violetDetector detects a piece
+                {
+                    Renderer rend = highlightPiece.GetComponent<Renderer>();
+
+                    if (highlightPiece.name.Contains("White"))
+                    {
+                        rend.material.color = Color.green;
+                    }
+                    else if (highlightPiece.name.Contains("Black"))
+                    {
+                        rend.material.color = Color.red;
+                    }
+                }
+                selected = command;
+                command = "";
+            }
+
+            
+        }
+        else if (command.Length >= 2)
+        {
+            command = command.Remove(0, 1);
+        }
+
+    }
 }
