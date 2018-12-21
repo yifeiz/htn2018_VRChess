@@ -111,8 +111,8 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
     <Compile Include="Assets\rex.cs" />
-    <Compile Include="Assets\Scripts\BasicUsageSample.cs" />
     <Compile Include="Assets\Scripts\Camera Control.cs" />
+    <Compile Include="Assets\Scripts\ChessDotNet\BasicUsageSample.cs" />
     <Compile Include="Assets\Scripts\ChessDotNet\Cache.cs" />
     <Compile Include="Assets\Scripts\ChessDotNet\CastlingType.cs" />
     <Compile Include="Assets\Scripts\ChessDotNet\ChessGame.cs" />
@@ -137,6 +137,7 @@
     <Compile Include="Assets\Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\MouseOver.cs" />
     <Compile Include="Assets\Scripts\MovementController.cs" />
+    <Compile Include="Assets\Scripts\PawnMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SingleMicrophoneCapture.cs" />
     <Compile Include="Assets\Testing.cs" />

@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Testing : MonoBehaviour {
-
+public class Testing : MonoBehaviour
+{
+    private Color32 copper = new Color32(223, 141, 56, 255);
     public static ChessGame game;
     public static Dictionary<string, int[]> boardCoords = new Dictionary<string, int[]>()
     {
@@ -77,19 +79,52 @@ public class Testing : MonoBehaviour {
     };
 
 
-    private Color32 copper = new Color32(223, 141, 56, 255);
+    
     public int modifier = 1;
 
-    private string command;
+    private string command = "";
     private string selected;
-    protected GameObject highlightPiece = null;
+    private GameObject highlightPiece = null;
+
+    public Text playerTextUI;
 
 
-    static GameObject getSumireko(string square)
+    // Allows highlighPiece to be set from MouseOver.cs
+    public void SetHighlightPieceViaMouse(GameObject piece)
+    {
+        highlightPiece = piece;
+
+        Collider[] hitColliders = Physics.OverlapSphere(piece.transform.position, 1);
+
+        for (int i = 0; i < hitColliders.Count(); i++)
+        {
+            if (Regex.IsMatch(hitColliders[i].gameObject.name, @"^[A-H][1-8]$"))
+            {
+                command = hitColliders[i].gameObject.name;
+                Debug.Log(command + "!");
+            }
+            else
+            {
+                command = "";
+                highlightPiece = null;
+            }
+        }
+
+    }
+
+
+    // Updates the current player UI (can probably be turned to be more general)
+    private void UpdatePlayerUIText()
+    {
+        playerTextUI.text = $"Current Player Turn:   {game.WhoseTurn}";
+    }
+
+
+    // Retrieves the piece detected by the violetDetector of a square
+    static GameObject GetSumireko(string square)
     {
         GameObject violetDetector = GameObject.Find(square);
         Collider[] hitColliders = Physics.OverlapSphere(violetDetector.transform.position, 1);
-
 
         for (int i = 0; i < hitColliders.Count(); i++)
         {
@@ -103,25 +138,33 @@ public class Testing : MonoBehaviour {
     }
 
 
-    public void movePiece(string current, string target) // Moves piece from current to target
+    // Physically moves a piece on the board
+    public void MovePiece(string current, string target) // Moves piece from current square to target square
     {
         Player currentPlayer = game.WhoseTurn;
         Move move = new Move(current, target, currentPlayer);
         bool isValid = game.IsValidMove(move);
-
         if (isValid) // If move if valid, detect piece on current square and send it to target square
         {
             MoveType type = game.ApplyMove(move, true);
+            // Note that after this point, game.WhoseTurn will return the opponent's colour
 
             if ((type & MoveType.Capture) == MoveType.Capture) // If movement kills another unit, send it to the shadow realm
             {
-                GameObject capturedPiece = getSumireko(target);
+                GameObject capturedPiece = GetSumireko(target);
                 capturedPiece.transform.Translate(Vector3.forward * 100);
             }
 
-            GameObject movingPiece = getSumireko(current);
+            GameObject movingPiece = GetSumireko(current);
+
+            /* Vector3 targetSquare = new Vector3(boardCoords[target][0], movingPiece.transform.position.y, boardCoords[target][2]);
+            movingPiece.GetComponent<PawnMovement>().SetDestination(targetSquare); */
+            // For animations to work, we need to wait for the violetDetector to detect the current player's piece on the target square
+
+
             movingPiece.transform.Translate(Vector3.up * (boardCoords[target][2] - movingPiece.transform.position.z) * modifier);
             movingPiece.transform.Translate(Vector3.right * (boardCoords[target][0] - movingPiece.transform.position.x) * modifier);
+            movingPiece.GetComponent<PawnMovement>().SetDestination(movingPiece.transform.position); // Temporary solution until piece animations work!
             Debug.Log($"{type} movement by {currentPlayer} from {current} to {target} was successful.");
         }
         else
@@ -129,9 +172,9 @@ public class Testing : MonoBehaviour {
             Debug.Log($"Movement by {currentPlayer} from {current} to {target} was not possible.");
         }
 
-        
+        UpdatePlayerUIText();
 
-        Piece[][] currentBoard = game.GetBoard();
+        Piece[][] currentBoard = game.GetBoard(); // What is this?
         int i = 0;
         int j = 0;
 
@@ -142,47 +185,50 @@ public class Testing : MonoBehaviour {
         if (game.IsCheckmated(game.WhoseTurn) == true)
         {
             gameOver = true;
+            playerTextUI.text = $"{currentPlayer} has won!"; 
         }
 
         if (game.IsDraw() == true)
         {
             gameOver = true;
+            playerTextUI.text = $"Draw!";
         }
 
         if (gameOver == true)
-        {}
+        {
+            // Insert fireworks here!
+        }
+
     }
 
 	// Use this for initialization
 	void Start () {
         game = new ChessGame();
 
-        this.movePiece("A2", "A3"); // W1
-        this.movePiece("C7", "C5"); // B1
-        this.movePiece("F2", "F3"); // W2
-        this.movePiece("G7", "G5"); // B2
-        this.movePiece("D2", "D4"); // W3
-        this.movePiece("F7", "F6"); // B3
-        this.movePiece("B2", "B3"); // W4
-        this.movePiece("G8", "H6"); // B4
-        this.movePiece("C1", "G5"); // W5
+        this.MovePiece("A2", "A3"); // W1
+        this.MovePiece("C7", "C5"); // B1
+        this.MovePiece("F2", "F3"); // W2
+        this.MovePiece("G7", "G5"); // B2
+        this.MovePiece("D2", "D4"); // W3
+        this.MovePiece("F7", "F6"); // B3
+        this.MovePiece("B2", "B3"); // W4
+        this.MovePiece("G8", "H6"); // B4
+        this.MovePiece("C1", "G5"); // W5
 
-        command = "";
-       
-     
+        UpdatePlayerUIText();
 
-     /*   Piece pieceAtA1 = game.GetPieceAt(new Position("A1")); 
-        Console.WriteLine("What piece is there at A1? {0}", pieceAtA1.GetFenCharacter());
-        
-        Move e2e4 = new Move("E2", "E4", Player.White);
-        bool isValid = game.IsValidMove(e2e4);
+        /*   Piece pieceAtA1 = game.GetPieceAt(new Position("A1")); 
+           Console.WriteLine("What piece is there at A1? {0}", pieceAtA1.GetFenCharacter());
 
-        
-        MoveType type = game.ApplyMove(e2e4, true);
-       
-        Debug.Log(game.GetPieceAt(File.E, 4));
-        moveWPawn5.MoveYoAss();
-        */
+           Move e2e4 = new Move("E2", "E4", Player.White);
+           bool isValid = game.IsValidMove(e2e4);
+
+
+           MoveType type = game.ApplyMove(e2e4, true);
+
+           Debug.Log(game.GetPieceAt(File.E, 4));
+           moveWPawn5.MoveYoAss();
+           */
     }
 	
 	// Update is called once per frame
@@ -199,9 +245,9 @@ public class Testing : MonoBehaviour {
 
         if ((command.Length == 2) && (Regex.IsMatch(command, @"^[A-H][1-8]$"))) // Activates violetDetector if command if valid
         {
-            if (highlightPiece != null) // On second valid input, attempts movement to target square and de-highlights piece
+            if (highlightPiece != null) // If highlight piece is valid, attempts movement to target square and de-highlights piece
             {
-                this.movePiece(selected, command);
+                this.MovePiece(selected, command);
 
                 Renderer rend = highlightPiece.GetComponent<Renderer>();
 
@@ -219,7 +265,7 @@ public class Testing : MonoBehaviour {
             }
             else
             {
-                highlightPiece = getSumireko(command);
+                highlightPiece = GetSumireko(command);
                 if (highlightPiece != null) // Highlights target piece, if selected violetDetector detects a piece
                 {
                     Renderer rend = highlightPiece.GetComponent<Renderer>();

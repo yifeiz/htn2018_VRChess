@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
-
 public class MouseOver : MonoBehaviour
 {
+    public GameObject player;
     private Renderer rend;
     private Material original;
     private Color32 copper = new Color32(223, 141, 56, 255);
+
 
     // Called on frames where mouse hovers over target
     void OnMouseOver()
@@ -22,8 +22,10 @@ public class MouseOver : MonoBehaviour
         {
             rend.material.color = Color.red;
         }
+        player.GetComponent<Testing>().SetHighlightPieceViaMouse(gameObject);
 
     }
+
 
     // Called on frame where mouse exits target
     void OnMouseExit()
@@ -40,12 +42,12 @@ public class MouseOver : MonoBehaviour
     }
 
 
-
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<Renderer>();
     }
+
 
     // Update is called once per frame
     void Update()
