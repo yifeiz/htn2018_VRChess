@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/yukari_chess_scene.unity
-  isLoaded: 1
-  isActive: 1
