@@ -62,32 +62,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioImportPostProcessor.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioManagerInspector.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\MinMaxPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\MixerSnapshotPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\OSPPropsPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\SoundFXPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\SoundFXRefPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\AudioManager\Scripts\Utils\Editor\DrawerInspectorNote.cs" />
-    <Compile Include="Assets\Oculus\Avatar\Editor\AvatarMaterialEditor.cs" />
-    <Compile Include="Assets\Oculus\LipSync\Editor\OVRLipSyncTool.cs" />
-    <Compile Include="Assets\Oculus\LipSync\Editor\OVRNamedArrayPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\Platform\Editor\GUIHelper.cs" />
-    <Compile Include="Assets\Oculus\Platform\Editor\OculusPlatformSettingsEditor.cs" />
-    <Compile Include="Assets\Oculus\Platform\Editor\OculusPluginUpdaterStub.cs" />
-    <Compile Include="Assets\Oculus\Platform\Editor\OculusStandalonePlatformResponse.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\Editor\TeleportTransitionWarpInspector.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Editor\BuildAssetPackages.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Editor\OculusSampleFrameworkUtil.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\Editor\ONSPAudioSourceEditor.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\Editor\ONSPPropagationGeometryEditor.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\Editor\ONSPPropagationMaterialEditor.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\Editor\ONSPReflectionCustomGUI.cs" />
-    <Compile Include="Assets\Watson\Scripts\Editor\IBMCloudSignup.cs" />
-    <Compile Include="Assets\Watson\Scripts\Editor\WatsonMenu.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Aot\Editor\fsAotConfigurationEditor.cs" />
-    <Compile Include="Assets\Watson\ThirdParty\FullSerializer\Editor\AotHelpers.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\AudioManager\Scripts\Audio\Editor\AudioImportPostProcessor.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\AudioManager\Scripts\Audio\Editor\AudioManagerInspector.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\AudioManager\Scripts\Audio\Editor\MinMaxPropertyDrawer.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\AudioManager\Scripts\Audio\Editor\MixerSnapshotPropertyDrawer.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\AudioManager\Scripts\Audio\Editor\OSPPropsPropertyDrawer.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\AudioManager\Scripts\Audio\Editor\SoundFXPropertyDrawer.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\AudioManager\Scripts\Audio\Editor\SoundFXRefPropertyDrawer.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\AudioManager\Scripts\Utils\Editor\DrawerInspectorNote.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Avatar\Editor\AvatarMaterialEditor.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\LipSync\Editor\OVRLipSyncTool.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\LipSync\Editor\OVRNamedArrayPropertyDrawer.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Platform\Editor\GUIHelper.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Platform\Editor\OculusPlatformSettingsEditor.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Platform\Editor\OculusPluginUpdaterStub.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Platform\Editor\OculusStandalonePlatformResponse.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Spatializer\Editor\ONSPAudioSourceEditor.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Spatializer\Editor\ONSPPropagationGeometryEditor.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Spatializer\Editor\ONSPPropagationMaterialEditor.cs" />
+    <Compile Include="Assets\Imported Packages\Oculus\Spatializer\Editor\ONSPReflectionCustomGUI.cs" />
+    <Compile Include="Assets\Imported Packages\Watson\Scripts\Editor\IBMCloudSignup.cs" />
+    <Compile Include="Assets\Imported Packages\Watson\Scripts\Editor\WatsonMenu.cs" />
+    <Compile Include="Assets\Imported Packages\Watson\ThirdParty\FullSerializer\Aot\Editor\fsAotConfigurationEditor.cs" />
+    <Compile Include="Assets\Imported Packages\Watson\ThirdParty\FullSerializer\Editor\AotHelpers.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/DaekunKim/Documents/Programming/htn2018_VRChess/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -337,9 +334,6 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>/Users/DaekunKim/Documents/Programming/htn2018_VRChess/Assets/Watson/Plugins/websocket-sharp.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>/Users/DaekunKim/Documents/Programming/htn2018_VRChess/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
@@ -360,6 +354,9 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>/Users/DaekunKim/Documents/Programming/htn2018_VRChess/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>/Users/DaekunKim/Documents/Programming/htn2018_VRChess/Assets/Imported Packages/Watson/Plugins/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.1f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

@@ -6,17 +6,17 @@ using UnityEngine;
 public class MouseOver : MonoBehaviour {
     private static Color32 copper = new Color32(223, 141, 56, 255);
 
-    public GameObject player;
+    public GameObject gameManager;
     private Renderer rend;
     private Material originalMaterial;
     private bool mouseDown;
     
 
     void OnMouseOver() {
-        if (gameObject.name.Contains("White")) {
+        if (tag.Equals("WhitePiece")) {
             rend.material.color = Color.green;
         }
-        else if (gameObject.name.Contains("Black")) {
+        else if (tag.Equals("BlackPiece")) {
             rend.material.color = Color.red;
         } 
     }
@@ -27,13 +27,13 @@ public class MouseOver : MonoBehaviour {
 
     void OnMouseUp() {
         if (mouseDown) {
-            player.GetComponent<Game>().SetSelectedPiece(gameObject);
+            gameManager.GetComponent<Game>().SetSelectedPiece(gameObject);
         }
     }
 
     void OnMouseExit() {
         mouseDown = false;
-        if (player.GetComponent<Game>().GetSelectedPiece() != gameObject) {
+        if (gameManager.GetComponent<Game>().GetSelectedPiece() != gameObject) {
             rend.material = originalMaterial;
         }
     }
